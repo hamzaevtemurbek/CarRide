@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - CarRide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #d0f239;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-box {
+            width: 380px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: slideUp 0.6s ease;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #ff7b00;
+            background: #fff7f0;
+            outline: none;
+        }
+
+        .btn-signup {
+            width: 100%;
+            padding: 15px;
+            background: #ff7b00;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 15px 0;
+            transition: 0.4s;
+        }
+
+        .btn-signup:hover {
+            background: #381ff1;
+            transform: scale(1.04);
+        }
+
+        .switch {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .switch a {
+            color: #ff7b00;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-box">
+        <h1>Create Account</h1>
+        <p>Join CarRide & start driving today!</p>
+
+        <input type="text" id="regName" placeholder="Full Name" required>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPass" placeholder="Password" required>
+        <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+
+        <button class="btn-signup" onclick="register()">Sign Up</button>
+
+        <p class="switch">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script src="users.js"></script>
+</body>
+
+</html>

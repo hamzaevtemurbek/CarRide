@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Cars</title>
+
+    <style>
+        body {
+            background-color: #d0f239;
+        }
+
+        .rent-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .car-preview {
+            flex: 1;
+            text-align: center;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-preview img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .car-preview h2 {
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ff7b00;
+        }
+
+        .rent-form {
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .rent-form h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-row input,
+        .form-row select {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        .rent-btn {
+            width: 100%;
+            padding: 14px;
+            background: #ff7b00;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .rent-btn:hover {
+            background: #e76a00;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="rent-container">
+
+        <div class="car-preview">
+            <img src="#" alt="Selected Car">
+            <h1 id="selected-car">Select a car first</h1>
+            <p>Complete your rental details below</p>
+            <span class="price">$0/day</span>
+        </div>
+
+        <form class="rent-form" id="rentalForm">
+
+            <h3>Customer Information</h3>
+
+            <div class="form-row">
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-row">
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Passport / ID Number" required>
+            </div>
+
+
+            <h3>Rental Details</h3>
+
+            <div class="form-row">
+                <input type="text" placeholder="Pick-up Location" required>
+                <input type="text" placeholder="Drop-off Location" required>
+            </div>
+
+            <div class="form-row">
+                <input type="date" id="startDate" required>
+                <input type="date" id="endDate" required>
+            </div>
+
+            <div class="form-row">
+                <select required>
+                    <option>Select Gear Type</option>
+                    <option>Automatic</option>
+                    <option>Manual</option>
+                </select>
+
+                <select required>
+                    <option>Select Fuel Type</option>
+                    <option>Petrol</option>
+                    <option>Electric</option>
+                    <option>Hybrid</option>
+                </select>
+            </div>
+
+            <button type="submit" class="rent-btn">Confirm Rental</button>
+        </form>
+
+    </section>
+    <script src="rent_cars.js" type="text/javascript"></script>
+    <script src="users.js"></script>
+</body>
+
+</html>

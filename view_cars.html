@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cars</title>
+    <link rel="stylesheet" href="view_cars.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo2">
+            <img src="https://cdn-s3.autocarindia.com/Jaguar/f-pace/_DSC1983.JPG?w=640&q=75" alt="car logo">
+            <h2>CarRide</h2>
+        </div>
+
+        <div class="links">
+            <a href="finalproject.html#" class="link">Home</a>
+            <a href="view_cars.html" class="link">View Cars</a>
+            <a href="rent_cars.html" class="link">Rent a
+                Car</a>
+            <a href="return_cars.html" class="link">Return a
+                Car</a>
+            <a href="profile.html" class="link">Profile</a>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <h2>Search Cars</h2>
+        <div class="search-box">
+            <i class="search-icon">&#128269;</i>
+            <input id="inputcar" type="text" placeholder="Enter keywords...">
+            <button class="search-btn" id="searchbtn" onclick="searchCars()">--->></button>
+        </div>
+    </section>
+
+    <section class="cars-pictures">
+
+        <div class="images" id="toyota"> <!--Toyota-->
+            <div id="cars">
+                <img src="pictures/Toyota_Corolla.jpg" alt="Toyota_Corolla">
+                <button id="btn1" onclick="rentCar('Toyota Corolla',35, 'pictures/Toyota_Corolla.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Toyota Corolla / 35$/day</h1>
+                    <button id="btn" onclick="rentCar('Toyota Corolla',35, 'pictures/Toyota_Corolla.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Toyota_Camry.jpg" alt="Toyota Camry">
+                <button id="btn1" onclick="rentCar('Toyota Camry',30, 'pictures/Toyota_Camry.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Toyota Camry/ 30$/day</h1>
+                    <button id="btn" onclick="rentCar('Toyota Camry',30, 'pictures/Toyota_Camry.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Toyota_Land_Cruiser.png" alt="Toyota_Land_Cruiser">
+                <button id="btn1" onclick="rentCar('Toyota Land Cruiser',50, 'pictures/Toyota_Land_Cruiser.png')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Toyoto Land Cruiser/50$/day</h1>
+                    <button id="btn" onclick="rentCar('Toyota Land Cruiser',50, 'pictures/Toyota_Land_Cruiser.png')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="ford"> <!-----------Ford-------->
+            <div id="cars">
+                <img src="pictures/Ford_Explorer.avif" alt="Ford Explorer">
+                <button id="btn1" onclick="rentCar('Ford Explorer',45,'pictures/Ford_Explorer.avif')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Ford Explorer/45$/day</h1>
+                    <button id="btn" onclick="rentCar('Ford Explorer',45,'pictures/Ford_Explorer.avif')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Ford_F-150.jpg" alt="Ford F-150">
+                <button id="btn1" onclick="rentCar('Ford F-150',40,'pictures/Ford_F-150.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Ford F-150 /40$/day</h1>
+                    <button id="btn" onclick="rentCar('Ford F-150',40,'pictures/Ford_F-150.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Ford_Mustang.jpg" alt="Ford Mustang">
+                <button id="btn1" onclick="rentCar('Ford Mustang',70,'pictures/Ford_Mustang.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Ford Mustang /70$/day</h1>
+                    <button id="btn" onclick="rentCar('Ford Mustang',70,'pictures/Ford_Mustang.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="tesla"> <!----------Tesla-------->
+            <div id="cars">
+                <img src="pictures/Tesla Model 3.webp" alt="Tesla Model 3">
+                <button id="btn1" onclick="rentCar('Tesla Model 3',25,'pictures/Tesla Model 3.webp')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Tesla Model 3/25$/day</h1>
+                    <button id="btn" onclick="rentCar('Tesla Model 3',25,'pictures/Tesla Model 3.webp')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Tesla Model S.jpg" alt="Tesla Model S">
+                <button id="btn1" onclick="rentCar('Tesla Model S',30,'pictures/Tesla Model S.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Tesla Model S/30$/day</h1>
+                    <button id="btn" onclick="rentCar('Tesla Model S',30,'pictures/Tesla Model S.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Tesla Model X.jpg" alt="Tesla Model X">
+                <button id="btn1" onclick="rentCar('Tesla Model X',50,'pictures/Tesla Model X.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Tesla Model X/50$/day</h1>
+                    <button id="btn" onclick="rentCar('Tesla Model X',50,'pictures/Tesla Model X.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="volkswagen"> <!-------Volkswagen-------->
+            <div id="cars">
+                <img src="pictures/Volkswagen Golf.jpg" alt="Volkswagen golf">
+                <button id="btn1" onclick="rentCar('Volkswagen Golf',30,'pictures/Volkswagen Golf.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Volkswagen Golf/30$/day</h1>
+                    <button id="btn" onclick="rentCar('Volkswagen Golf',30,'pictures/Volkswagen Golf.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Volkswagen Passat.jpg" alt="Volkswagen Passat">
+                <button id="btn1" onclick="rentCar('Volkswagen Passat',30,'pictures/Volkswagen Passat.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Volkswagen Passat/30$/day</h1>
+                    <button id="btn" onclick="rentCar('Volkswagen Passat',30,'pictures/Volkswagen Passat.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Volkswagen Tiguan.jpg" alt="Volkswagen Tiguan">
+                <button id="btn1" onclick="rentCar('Volkswagen Tiguan',35,'pictures/Volkswagen Tiguan.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Volkswagen Tiguan/35$/day</h1>
+                    <button id="btn" onclick="rentCar('Volkswagen Tiguan',35,'pictures/Volkswagen Tiguan.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="bmw"> <!------------BMW------------->
+            <div id="cars">
+                <img src="pictures/BMW 3 Series.avif" alt="BMW 3 Series">
+                <button id="btn1" onclick="rentCar('BMW 3 Series',45,'pictures/BMW 3 Series.avif')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>BMW 3 Series/45$/day</h1>
+                    <button id="btn" onclick="rentCar('BMW 3 Series',45,'pictures/BMW 3 Series.avif')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/BMW 5 Series.jpg" alt="BMW 5 Series">
+                <button id="btn1" onclick="rentCar('BMW 5 Series',50,'pictures/BMW 5 Series.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>BMW 5 Series /50$/day</h1>
+                    <button id="btn" onclick="rentCar('BMW 5 Series',50,'pictures/BMW 5 Series.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/BMW X5.webp" alt="BMW X5">
+                <button id="btn1" onclick="rentCar('BMW X5',55,'pictures/BMW X5.webp')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>BMW X5 /55$/day</h1>
+                    <button id="btn" onclick="rentCar('BMW X5',55,'pictures/BMW X5.webp')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="mers"> <!------------MERS------------->
+            <div id="cars">
+                <img src="pictures/Mercedes-Benz C-Class.jpg" alt="Mercedes-Benz C-Class">
+                <button id="btn1" onclick="rentCar('Mercedes-Benz C-Class',40,'pictures/Mercedes-Benz C-Class.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>MERS C-Class/40$/day</h1>
+                    <button id="btn" onclick="rentCar('Mercedes-Benz C-Class',40,'pictures/Mercedes-Benz C-Class.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Mercedes-Benz E-Class.webp" alt="Mercedes-Benz E-Class">
+                <button id="btn1" onclick="rentCar('Mercedes-Benz E-Class',50,'pictures/Mercedes-Benz E-Class.webp')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>MERS E-Class /50$/day</h1>
+                    <button id="btn" onclick="rentCar('Mercedes-Benz E-Class',50,'pictures/Mercedes-Benz E-Class.webp')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Mercedes-Benz S-Class.jpg" alt="Mercedes-Benz S-Class">
+                <button id="btn1" onclick="rentCar('Mercedes-Benz S-Class',55,'pictures/Mercedes-Benz S-Class.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>MERS S-Class /55$/day</h1>
+                    <button id="btn" onclick="rentCar('Mercedes-Benz S-Class',55,'pictures/Mercedes-Benz S-Class.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="hyundai"> <!------------HYUNDAI------------->
+            <div id="cars">
+                <img src="pictures/Hyundai Elantra.jpg" alt="Hyundai Elantra">
+                <button id="btn1" onclick="rentCar('Hyundai Elantra',30,'pictures/Hyundai Elantra.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Hyundai Elantra/30$/day</h1>
+                    <button id="btn" onclick="rentCar('Hyundai Elantra',30,'pictures/Hyundai Elantra.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Hyundai Sonata.jpg" alt="Hyundai Sonata">
+                <button id="btn1" onclick="rentCar('Hyundai Sonata',33,'pictures/Hyundai Sonata.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Hyundai Sonata /33$/day</h1>
+                    <button id="btn" onclick="rentCar('Hyundai Sonata',33,'pictures/Hyundai Sonata.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Hyundai Tucson.jpg" alt="Hyundai Tucson">
+                <button id="btn1" onclick="rentCar('Hyundai Tucson',39,'pictures/Hyundai Tucson.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Hyundai Tucson /39$/day</h1>
+                    <button id="btn" onclick="rentCar('Hyundai Tucson',39,'pictures/Hyundai Tucson.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="kia"> <!------------KIA------------->
+            <div id="cars">
+                <img src="pictures/Kia K5.avif" alt="Kia K5">
+                <button id="btn1" onclick="rentCar('Kia K5',41,'pictures/Kia K5.avif')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Kia K5/41$/day</h1>
+                    <button id="btn" onclick="rentCar('Kia K5',41,'pictures/Kia K5.avif')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Kia Sorento.jpg" alt="Kia Sorento">
+                <button id="btn1" onclick="rentCar('Kia Sorento',37,'pictures/Kia Sorento.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Kia Sorento /37$/day</h1>
+                    <button id="btn" onclick="rentCar('Kia Sorento',37,'pictures/Kia Sorento.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Kia Sportage.jpg" alt="Kia Sportage">
+                <button id="btn1" onclick="rentCar('Kia Sportage',43,'pictures/Kia Sportage.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Kia Sportage /43$/day</h1>
+                    <button id="btn" onclick="rentCar('Kia Sportage',43,'pictures/Kia Sportage.jpg')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="images" id="audi"> <!------------AUDI------------->
+            <div id="cars">
+                <img src="pictures/Audi A3.jpg" alt="Audi A3">
+                <button id="btn1" onclick="rentCar('Audi A3',36,'pictures/Audi A3.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Audi A3 /36$/day</h1>
+                    <button id="btn" onclick="rentCar('Audi A3',36,'pictures/Audi A3.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Audi A4.jpg" alt="Audi A4">
+                <button id="btn1" onclick="rentCar('Audi A4',43,'pictures/Audi A4.jpg')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Audi A4 /43$/day</h1>
+                    <button id="btn" onclick="rentCar('Audi A4',43,'pictures/Audi A4.jpg')">Rent Now!</button>
+                </div>
+            </div>
+            <div id="cars">
+                <img src="pictures/Audi A6.avif" alt="Audi A6">
+                <button id="btn1" onclick="rentCar('Audi A6',46,'pictures/Audi A6.avif')">Rent Now!</button>
+                <div id="cars-info">
+                    <h1>Audi A6 /46$/day</h1>
+                    <button id="btn" onclick="rentCar('Audi A6',46,'pictures/Audi A6.avif')">Rent Now!</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="view_cars.js" type="text/javascript"></script>
+    <script src="users.js"></script>
+</body>
+
+</html>

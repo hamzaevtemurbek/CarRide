@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - CarRide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #d0f239;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            width: 350px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.6s ease;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #ff7b00;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #ff7b00;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #e56a00;
+            transform: scale(1.03);
+        }
+
+        .switch {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .switch a {
+            color: #ff7b00;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h1>Login to CarRide</h1>
+        <p>Welcome back! Rent your dream car today.</p>
+
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPass" placeholder="Password" required>
+
+        <button class="btn-login" onclick="login()">Login</button>
+
+        <p class="switch">Don't have an account? <a href="register.html">Sign Up</a></p>
+    </div>
+
+    <script src="users.js"></script>
+</body>
+
+</html>
