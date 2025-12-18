@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Cars</title>
+</head>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: #d0f239;;
+        margin: 0;
+    }
+
+    .return-container {
+        max-width: 600px;
+        margin: 60px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .return-container h1 {
+        margin-bottom: 10px;
+    }
+
+    .return-box {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .return-box input {
+        padding: 12px;
+        width: 60%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .return-box button {
+        padding: 12px 20px;
+        background-color:  rgb(230, 61, 61);
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .return-box button:hover {
+        background-color: #381ff1;
+    }
+
+    .details-box {
+        margin-top: 20px;
+        text-align: left;
+        background: #fffaf2;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 5px solid #ff7b00;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .confirm-btn {
+        width: 100%;
+        padding: 14px;
+        margin-top: 20px;
+        background-color: #0077cc;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .confirm-btn:hover {
+        background-color: #005fa3;
+    }
+
+    .result-msg {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <section class="return-container">
+        <h1>Return Your Car</h1>
+        <p>Enter your rental ID to return a car</p>
+
+        <div class="return-box">
+            <input type="text" id="rentalIdInput" placeholder="Rental ID" />
+            <button id="returnBtn" onclick="returnCars()">Return Car</button>
+        </div>
+
+        <div id="rentalDetails" class="details-box hidden">
+            <h2>Rental Details</h2>
+            <p><strong>Car:</strong> <span id="carName"></span></p>
+            <p><strong>Customer:</strong> <span id="custName"></span></p>
+            <p><strong>Start Date:</strong> <span id="startDate"></span></p>
+            <p><strong>Due Date:</strong> <span id="dueDate"></span></p>
+            <p><strong>Total Price:</strong> <span id="totalCost"></span></p>
+            <p><strong>Late Fee:</strong> <span id="lateFee"></span></p>
+
+            <button id="confirmBtn" class="confirm-btn" onclick="confirmbtn()">Confirm Return</button>
+        </div>
+
+        <div id="resultMessage" class="result-msg hidden"></div>
+
+    </section>
+    
+    <script src="return_cars.js" type="text/javascript"></script>
+    <script src="users.js"></script>
+
+</body>
+
+</html>

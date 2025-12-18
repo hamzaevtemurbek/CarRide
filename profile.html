@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - CarRide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #d0f239, #a8e636);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .container h2 {
+            color: rgb(230, 61, 61);
+            text-align: center;
+            margin: 30px 0;
+            font-size: 32px;
+        }
+
+        .profile-header {
+            background: white;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h1 {
+            font-size: 38px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .profile-header p {
+            font-size: 20px;
+            color: #f5a623;
+            font-weight: 600;
+        }
+
+        .rentals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+        }
+
+        .rentals-grid p {
+            grid-column: 1/-1;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .rental-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .rental-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(245, 166, 35, 0.3);
+        }
+
+        .rental-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 10px;
+        }
+
+        .info h3 {
+            color: #0f4db0;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .info span{
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .info button{
+            margin-left:10px; 
+            padding:8px 16px; 
+            background:#ff4444; 
+            color:white; 
+            border:none; 
+            border-radius:50px; 
+            cursor:pointer; 
+            font-size:20px;
+            transition: all 0.4s;
+        }
+        .info button:hover{
+            background-color: rgb(233, 83, 83);
+            transform: translateY(-10px) scale(1.07) rotate(-15deg);
+        }
+
+        .status {
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 0px;
+            transition: all 0.4s;
+        }
+        .status:hover{
+            transform: translateY(-10px) scale(1.07) rotate(15deg);
+        }
+
+        .active {
+            background: #e8f5e8;
+            color: #19831e;
+        }
+
+        .returned {
+            background: #ffebee;
+            color: #c61010;
+        }
+
+        .navbar {
+            background: rgb(230, 61, 61);
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            z-index: 1000;
+            top: 3px;
+        }
+
+        .navbar a {
+            color: #360423;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 20px;
+        }
+
+        .navbar a:hover {
+            color: #f5a623;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .head img {
+            border-radius: 20px;
+            width: 80px;
+            height: 80px;
+            transition: transform 0.4s ease;
+        }
+
+        .head img:hover {
+            transform: rotate(360deg) scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="head">
+            <img src="https://cdn-s3.autocarindia.com/Jaguar/f-pace/_DSC1983.JPG?w=640&q=75" alt="logo">
+            <h2 style="color:#222;">CarRide</h2>
+        </div>
+        <div>
+            <a href="finalproject.html">Home</a>
+            <a href="view_cars.html">View Cars</a>
+            <a href="return_cars.html">Return the Car</a>
+            <a href="finalproject.html" onclick="logout()">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="profile-header">
+            <h1 id="userName">Loading...</h1>
+            <p id="userEmail"></p>
+            <p>Total Rentals: <strong id="totalRentals">0</strong></p>
+        </div>
+
+        <h2>My Rental History</h2>
+        <div class="rentals-grid" id="myRentals">
+            <p>
+                No rentals yet. Go rent your first car!
+            </p>
+        </div>
+    </div>
+
+    <script src="users.js"></script>
+    <script src="profile.js" ></script>
+</body>
+
+</html>
